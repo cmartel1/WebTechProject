@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All About Colby Martel</title>
+    <style>
+        h2{
+            text-align: left;
+            color:crimson;
+            font-family: 'Lato', sans-serif;
+        }
+        h3{
+            font-family: cursive;
+            text-align: center;
+            color: crimson;
+        }
+        p{
+            font-family: sans-serif;
+            color: black;
+            font-size: 1.2em;
+            margin-left: 30px;
+        }
+        img{
+            float: left
+        }
+        img{
+            margin-top:20px; margin-left: 20px; margin-right: 20px; margin-bottom: 20px;
+        }
+        body{
+            background-color: gainsboro;
+            margin-right: 120px; margin-left: 120px;
+        }
+        a{
+            text-decoration: none}
+        header a{
+            color: white}
+        #sub{
+            text-align: center;
+            color: white;
+            background-color: red;
+            padding: 10px;
+            border-radius: 10px;
+         text-align: center;
+        }
+        header {
+            color:white;
+            background-color:crimson;
+            text-align: center;
+            display: flex;
+            padding: 5px 5px;
+            justify-content: left;
+            font-family: calibri;
+          }
+        nav ul {
+            list-style: none;
+            display: flex;
+          }
+          nav ul li {
+            margin-left: 20px;
+          }
+/* dropdown learned from w3schools*/
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+}
+.dropbutton{
+    border: none;
+    background-color: crimson;
+    color: white;
+    font-family: calibri;
+    font-size: 15px;
+    padding-left: 20px;
+}
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+        /*I learned how to style the button from MDN Web Docs*/
+    </style>
+</head>
+<body>
+        <header>
+          <nav>
+            <ul>
+              <li>Colby Martel</li>
+              <li><a href="#">Home</a></li>
+              <li><a href="#aboutme">About Me</a></li>
+              <li><a href="#interests">My Interests</a></li>
+              <li><a href="#contact">Contact Information</a></li>
+                <div class="dropdown">
+                  <button class="dropbutton">Homework 2
+                    <i class="dropdownhw"></i>
+                  </button>
+                  <div class="dropdown-content">
+                    <a href="hw2-1.html">hw2-1</a>
+                    <a href="hw2-2.html">hw2-2</a>
+                    <a href="hw2-3.html">hw2-3</a>
+                    <a href="hw2-4.html">hw2-4</a>
+                    <!-- learned from w3schools-->
+                  </div>
+                </div>
+              </div>
+            </header>
+        <h2 id="aboutme">About Me</h2>
+        <p>
+        <img src="images/100kpic_Original.jpg" alt="Photo of Colby Martel" title="Colby Martel" height="200"/>
+        Hi! My name is Colby Martel. I was born in Nashua, New Hampshire on October 31, 2001. My two sisters were born not long after in 2003 and 2004. When I was six years old, my family moved to Nashua where I pursued a public education, joined many sports teams, and made many great friends. In high school, I became captain of my cross-country team, was elected as Class President, and discovered my passion for video creation and business, which led me to apply to Babson.</p>
+        <p>
+    I chose to attend <a href="https://www.babson.edu">Babson College</a> due to the generous financial aid provided by donors. It had been my top choice due to its diverse community, beautiful, small campus, and reputation for providing an excellent education for young entrepreneurs, however I was nervous that it wouldn't be feasible to attend due to its sticker price. Gratefully, despite getting accepted to 10 other colleges, Babson provided me with the second best financial aid package, so it I was able to confidently enroll. After graduation, I plan to continue making videos for my YouTube channel and work with brands to promote their services to my audience.</p>
+    </h2>
+    <h2 id="interests">My Interests</h2>
+<body>
+    <p> My favorite hobby is making <a href="https://www.youtube.com/">YouTube</a> videos. Throughout the fall semester, I uploaded a new long-form video every Wednesday as well as more than 50 short-form videos, including one every single day in November. This helped me gain more than 100,000 subscribers and 100 million views over that time. My videos primarily involve the exploration of college life through interviews with friends and strangers. My favorite video to make last semester was called, <a href="https://www.youtube.com/watch?v=hTzGmo0OtO8">"Asking Harvard Students for a Dorm Tour."</a> I also love to watch YouTube videos. My favorite creators are MrBeast, Ryan Trahan &amp; Kelly Wakasa. </p>
+    <button id="sub" onclick="window.location.href='https://www.youtube.com/@ColbyMartel';">Subscribe to My Channel</button>
+    <!--I learned how to create the button above from W3Schools-->
+    <img src="https://img-cdn.inc.com/image/upload/w_1920,h_1080,c_fill/images/panoramic/GettyImages-1236321381_512179_i2byfb.jpg" alt="Photo of MrBeast" title="MrBeast" height="200"/>
+    <hr>
+<h3 id="contact">Contact</h3>
+<p> Colby Martel<br>
+Web Technologies &lt;OIM3690&gt;<br>
+<a href="https://github.com/cmartel1/WebTech">GitHub: cmartel1/WebTech</a><br>
+<a href="mailto: cmartel1@babson.edu">Email: cmartel1@babson.edu</a><br>
+<a href="https://www.instagram.com/colbymartel19">Instagram: @colbymartel19</a><br>
+<a href="https://www.youtube.com/@ColbyMartel">YouTube Channel: @ColbyMartel</a><br></p>
+<!--I learned the following footer tag from MDN Web Docs-->
+<footer>
+   <p>&#169;2023 Colby Martel</p>
+</footer>
+</body>
+</html>
+    <!--I, [your name], pledge my honor that I have neither received nor provided unauthorized assistance during the completion of this work-->
