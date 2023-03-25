@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Inspirations</title>
+</head>
+    <style>
+        header{
+            background-color: whitesmoke;
+            display: flex;
+            justify-content: left;
+            font-family: calibri;
+            font-size: 16px;
+            color: black;
+            font-weight: bold;
+            height: 55px;
+            border-bottom: solid black 1px;
+        }
+        ul{
+            display: flex;
+            list-style: none;
+        }
+        li{
+            margin-left: 30px;
+            margin-top: 2px;
+        }
+        #pfp{
+            margin-top: -8px;
+            margin-left: -32px;
+        }
+        a{
+            text-decoration: none;
+            color: black;
+        }
+        body{
+            background-color: white;
+            font-family: calibri;
+        }
+        .grid-container{
+            display:grid;
+        }
+        #header2{
+            background-color: white;
+            display: flex;
+            justify-content: left;
+            font-family: calibri;
+            font-size: 16px;
+            color: black;
+            font-weight: bold;
+            height: 66px;
+            border-bottom: solid black 1px;  
+        }
+        #subscribe{
+            color: white;
+            background-color: red;
+            padding: 10px;
+            width: 200px;
+            border-radius: 10px;
+            text-align: center;
+        }
+        #mrbeast{
+            grid-row: 1;
+            grid-column: 1;
+        }
+        #ryan{
+            grid-row: 1;
+            grid-column: 2;
+        }
+        #kelly{
+            grid-row: 1;
+            grid-column: 3;
+        }
+        #ryan-info{
+            padding: 10px;
+        }
+        footer{
+            background-color: whitesmoke;
+            display: flex;
+            justify-content: left;
+            font-family: calibri;
+            font-size: 16px;
+            color: black;
+            height: 55px;
+            border-bottom: solid black 1px;
+            margin-top: 10px;
+        }
+        #footer{
+            margin-left: 20px;
+        }
+        #email{
+            margin-left: 900px;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li id="pfp"><a href="https://youtube.com/@ColbyMartel">
+                    <img src="images/channels4_profile.jpg" alt="pfp" title="pfp" height="40"></a></li>
+                <li><a href = "index.html">Colby Martel</a></li>
+                <li><a href = "videos.html">Videos</a></li>
+                <li><a href = "blog.html">Blog</a></li>
+                <li><a href = "bts.html">Behind the Scenes</a></li>
+                <li><a href = "inspirations.html">Inspirations</a></li>
+            </ul>
+        </nav>
+    </header>
+<body>
+    <header id="header2">
+        <h2>Inspirations</h2>
+    </header>
+    <div class="grid-container">
+    <div id="mrbeast">
+    <h3>MrBeast</h3>
+    <img src="images/mrbeast.jpg" alt="mrbeast" title="mrbeast" height="200">
+    <p id="mrbeast-info">MrBeast is a the most popular creator on the planet. Based in North Carolina, he's amassed nearly 140 million subscribers on YouTube, and millions more across other social platforms. He's most well known for his creativity, passion, and philanthropy, willing to do whatever it takes to make the coolest videos possible all while helping those in need. At this point, his main channel videos cost him nearly $4 million each to produce. He's inspired me to persevere on YouTube, think creativity, and contribute to my community.</p>
+    <button id="subscribe" onclick="window.location.href='https://www.youtube.com/@MrBeast';">Subscribe to MrBeast</button></div>
+    <div id="ryan">
+        <h3>Ryan Trahan</h3>
+        <img src="images/ryan.jpg" alt="ryan" title="ryan" height="200">
+        <p id="ryan-info">Ryan Trahan is a 24-year-old YouTube creator based in Texas. He makes videos that showcases his personality in awkward situations or as he tries new things. He is most famous for his month-long "Penny Series" expedition, in which he crossed America starting with nothing other than a penny and raised $1.4 million for Feeding America in the process. He's inspired me to practice healthy habits and create videos as a gift for the audience.</p>
+        <button id="subscribe" onclick="window.location.href='https://www.youtube.com/@ryan';">Subscribe to Ryan Trahan</button></div>
+    <div id="kelly">
+        <h3>Kelly Wakasa</h3>
+        <img src="images/kelly.jpg" alt="kelly" title="kelly" height="200">
+        <p id="kelly-info">Kelly Wakasa is a lifestyle creator based in New York City. He lives by the mantra "Do What Excites," pursuing exciting activities like surprising friends, skydiving, or spending 24 hours with the world's tallest man. He's inspired me to follow this pursuit as well and pursue exciting journeys despite my irrational fears or costs.</p>
+        <button id="subscribe" onclick="window.location.href='https://www.youtube.com/@KellyWakasa';">Subscribe to Kelly Wakasa</button></div>
+        </div>
+</body>
+<footer>
+    <p id="footer">&#169; 2023 Colby Martel | <a href = "sitemap.html">Site Map</a>
+        <a id=email href = "mailto: colbyma23@gmail.com">Send Email</a>
+    </p>
+</footer>
+</html>

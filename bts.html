@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Behind the Scenes</title>  <style>
+        header{
+            background-color: whitesmoke;
+            display: flex;
+            justify-content: left;
+            font-family: calibri;
+            font-size: 16px;
+            color: black;
+            font-weight: bold;
+            height: 55px;
+            border-bottom: solid black 1px;
+        }
+        ul{
+            display: flex;
+            list-style: none;
+        }
+        li{
+            margin-left: 30px;
+            margin-top: 2px;
+        }
+        #pfp{
+            margin-top: -8px;
+            margin-left: -32px;
+        }
+        a{
+            text-decoration: none;
+            color: black;
+        }
+        body{
+            background-color: white;
+            font-family: calibri;
+        }
+        .grid-container{
+            display:grid;
+        }
+        #header2{
+            background-color: white;
+            display: flex;
+            justify-content: left;
+            font-family: calibri;
+            font-size: 16px;
+            color: black;
+            font-weight: bold;
+            height: 66px;
+            border-bottom: solid black 1px;  
+        }
+        #firstvideo{
+            grid-column: 1;
+            grid-row: 1;
+        }
+        #harvardvideo{
+            grid-column: 1;
+            grid-row: 2;
+        }
+        #details-harvard{
+            grid-column-start: 2;
+            grid-column-end: 5;
+            grid-row: 2;
+            padding-left: 20px;
+        }
+        #scaryvideo{
+            grid-row: 3;
+            grid-column: 1;
+        }
+        #pennyvideo{
+            grid-row: 4;
+            grid-column: 1;
+        }
+        #details-scary{
+            grid-row: 4;
+            grid-column-start: 2;
+            grid-column-end: 5;
+            padding-left: 20px;
+        }
+        footer{
+            background-color: whitesmoke;
+            display: flex;
+            justify-content: left;
+            font-family: calibri;
+            font-size: 16px;
+            color: black;
+            height: 55px;
+            margin-top: 10px;
+            border-bottom: solid black 1px;
+        }
+        #footer{
+            margin-left: 20px;
+        }
+        #email{
+            margin-left: 900px;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li id="pfp"><a href="https://youtube.com/@ColbyMartel">
+                    <img src="images/channels4_profile.jpg" alt="pfp" title="pfp" height="40"></a></li>
+                <li><a href = "index.html">Colby Martel</a></li>
+                <li><a href = "videos.html">Videos</a></li>
+                <li><a href = "blog.html">Blog</a></li>
+                <li><a href = "bts.html">Behind the Scenes</a></li>
+                <li><a href = "inspirations.html">Inspirations</a></li>
+            </ul>
+        </nav>
+    </header>
+    <header id="header2">
+        <h2>Behind the Scenes</h2>
+    </header>
+    <div class="grid-container">
+        <h2 id="firstvideo">My First Video</h2>
+        <iframe id="harvardvideo" width="345" height="222" src="https://www.youtube.com/embed/Bt1SIIe8s5I" title="Asking Harvard Students If They Ever Sleep" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>       <p id="details-harvard">The latest video published on my channel was filmed on Thursday, October 28th, 2021. The initial filming date was Sunday, October 24th but, after 3 hours on campus at Harvard University, I lacked the confidence to interact with strangers and ask for interviews. I only asked one person, but he was not a student. Rather than feeling discouraged, this failure lit a flame, and I became driven to overcome the insecurity and pursue my dream of being a video creator. So, I asked my friend Kevin to film again with me, and he offered a one hour time slot that Thursday. Once stepping foot on campus, I didn't hesitate to ask for an interview. The first group rejected me, but one minute later, another group accepted, as did the third group. With their responses, I packaged the footage into this six minute video, which now has been viewed nearly 5 million times.</p>
+        <h2 id="scaryvideo">My Scariest Video to Film</h2>
+        <iframe id="pennyvideo" width="345" height="222" src="https://www.youtube.com/embed/5mXU93phwuY" title="Turning $0.01 into $1,000 for Ryan Trahan" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <p id="details-scary">In this video, I attempted to raise $1,000 at York Beach, with only a penny and my personality. I was able to buy a water bottle for a penny, sell it for $5, then buy post cards that sold for nearly $20. With that, I bought a joke book and sold jokes for donations, then later bought crayons and paper to make a sign that read, "dares for dollars." A group of middle schoolers dared me to beat a stranger in a basketball game for $7. This was by far the most awkward and insecure I felt filming a video. It was inspired by Ryan Trahan, who makes it look so easy. Although I approach a stranger within the first 30 seconds of the video, in reality, it took multiple hours to build the courage. Although for a great cause, it was particularly straining to request money from strangers, while I was previously accustomed to giving money away.</p>
+    </div>
+</body>
+<footer>
+    <p id="footer">&#169; 2023 Colby Martel | <a href = "sitemap.html">Site Map</a>
+        <a id=email href = "mailto: colbyma23@gmail.com">Send Email</a>
+    </p>
+</footer>
+</html>
