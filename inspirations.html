@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Inspirations</title>
+    <link rel="icon" href="images/favicon.ico">
 </head>
     <style>
         header{
@@ -40,6 +41,8 @@
         }
         .grid-container{
             display:grid;
+            margin-left: 10px;
+            padding: 10px;
         }
         #header2{
             background-color: white;
@@ -55,10 +58,15 @@
         #subscribe{
             color: white;
             background-color: red;
-            padding: 10px;
-            width: 200px;
+            padding-left: 20px;
+            padding-right: 20px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            width: 150px;
+            border: 2px solid black;
             border-radius: 10px;
             text-align: center;
+            margin-left: 10px;
         }
         #mrbeast{
             grid-row: 1;
@@ -72,8 +80,20 @@
             grid-row: 1;
             grid-column: 3;
         }
+        #mrbeast-info{
+            padding: 10px;
+        }
         #ryan-info{
             padding: 10px;
+        }
+        #kelly-info{
+            padding: 10px;
+        }
+        img{
+            margin-left: 10px;
+        }
+        h3{
+            margin-left: 10px;
         }
         footer{
             background-color: whitesmoke;
@@ -92,6 +112,9 @@
         #email{
             margin-left: 900px;
             text-decoration: underline;
+        }
+        #subscribe:hover {
+            background-color: rgb(230, 98, 98);
         }
     </style>
 </head>
@@ -118,17 +141,18 @@
     <h3>MrBeast</h3>
     <img src="images/mrbeast.jpg" alt="mrbeast" title="mrbeast" height="200">
     <p id="mrbeast-info">MrBeast is a the most popular creator on the planet. Based in North Carolina, he's amassed nearly 140 million subscribers on YouTube, and millions more across other social platforms. He's most well known for his creativity, passion, and philanthropy, willing to do whatever it takes to make the coolest videos possible all while helping those in need. At this point, his main channel videos cost him nearly $4 million each to produce. He's inspired me to persevere on YouTube, think creativity, and contribute to my community.</p>
-    <button id="subscribe" onclick="window.location.href='https://www.youtube.com/@MrBeast';">Subscribe to MrBeast</button></div>
+    <a id="subscribe" href="https://www.youtube.com/@MrBeast" target="_blank">Subscribe to MrBeast</a></div>
     <div id="ryan">
         <h3>Ryan Trahan</h3>
         <img src="images/ryan.jpg" alt="ryan" title="ryan" height="200">
         <p id="ryan-info">Ryan Trahan is a 24-year-old YouTube creator based in Texas. He makes videos that showcases his personality in awkward situations or as he tries new things. He is most famous for his month-long "Penny Series" expedition, in which he crossed America starting with nothing other than a penny and raised $1.4 million for Feeding America in the process. He's inspired me to practice healthy habits and create videos as a gift for the audience.</p>
-        <button id="subscribe" onclick="window.location.href='https://www.youtube.com/@ryan';">Subscribe to Ryan Trahan</button></div>
+        <a id="subscribe" href="https://www.youtube.com/@ryan" target="_blank">Subscribe to Ryan Trahan</a></div>
+
     <div id="kelly">
         <h3>Kelly Wakasa</h3>
         <img src="images/kelly.jpg" alt="kelly" title="kelly" height="200">
         <p id="kelly-info">Kelly Wakasa is a lifestyle creator based in New York City. He lives by the mantra "Do What Excites," pursuing exciting activities like surprising friends, skydiving, or spending 24 hours with the world's tallest man. He's inspired me to follow this pursuit as well and pursue exciting journeys despite my irrational fears or costs.</p>
-        <button id="subscribe" onclick="window.location.href='https://www.youtube.com/@KellyWakasa';">Subscribe to Kelly Wakasa</button></div>
+        <a id="subscribe" href="https://www.youtube.com/@KellyWakasa" target="_blank">Subscribe to Kelly Wakasa</a></div>
         </div>
 </body>
 <footer>

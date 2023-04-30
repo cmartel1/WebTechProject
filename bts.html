@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Behind the Scenes</title>  <style>
+    <title>Behind the Scenes</title>  
+    <link rel="icon" href="images/favicon.ico">
+    <style>
         header{
             background-color: whitesmoke;
             display: flex;
@@ -38,6 +40,7 @@
         }
         .grid-container{
             display:grid;
+            margin-left: 10px;
         }
         #header2{
             background-color: white;
@@ -50,33 +53,111 @@
             height: 66px;
             border-bottom: solid black 1px;  
         }
-        #firstvideo{
+        #colleges-visited{
             grid-column: 1;
             grid-row: 1;
         }
         #harvardvideo{
             grid-column: 1;
-            grid-row: 2;
+            grid-row: 6;
         }
         #details-harvard{
             grid-column-start: 2;
             grid-column-end: 5;
-            grid-row: 2;
+            grid-row: 6;
             padding-left: 20px;
         }
         #scaryvideo{
-            grid-row: 3;
+            grid-row: 7;
             grid-column: 1;
         }
         #pennyvideo{
-            grid-row: 4;
+            grid-row: 8;
             grid-column: 1;
         }
         #details-scary{
-            grid-row: 4;
+            grid-row: 8;
             grid-column-start: 2;
             grid-column-end: 5;
             padding-left: 20px;
+        }
+        #firstvideo{
+            grid-row: 5;
+            grid-column: 1;
+        }
+        #equipment{
+            grid-row: 1;
+            grid-column: 3;
+        }
+        #harvard-image{
+            grid-row-start: 2;
+            grid-row-end: 4;
+            grid-column: 1;
+            border: 3px solid rgb(207, 34, 34);
+        }
+        #equipment-image{
+            grid-row-start: 2;
+            grid-row-end: 4;
+            grid-column: 3;
+            border: 3px solid rgb(207, 205, 205);
+        }
+        #college-name{
+            grid-row: 2;
+            grid-column: 2;
+        }
+        #equipment-name{
+            grid-row: 2;
+            grid-column: 4;
+            margin-left: -50px;
+        }
+        #college-details{
+            grid-row: 3;
+            grid-column: 2;
+            margin-left: -65px;
+            margin-top: -80px;
+            display: inline-block;
+        }
+        #equipment-details{
+            grid-row: 3;
+            grid-column: 4;
+            margin-left: -120px;
+            margin-top: -60px;
+            display: inline-block;
+        }
+        #college-website{
+            grid-row: 4;
+            grid-column: 2;
+            width: 200px;
+            height: 25px;
+            background-color: lightgrey;
+            color: black;
+            border: 2px solid black;
+            border-radius: 10px;
+            margin-top: -70px;
+            padding-top: 5px;
+            text-align: center;
+        }
+        #college-website:hover{
+            background-color: white;
+            color: black;
+        }
+        #equipment-website{
+            grid-row: 4;
+            grid-column: 4;
+            width: 200px;
+            height: 25px;
+            background-color: lightgrey;
+            color: black;
+            border: 2px solid black;
+            border-radius: 10px;
+            padding-top: 5px;
+            text-align: center;
+            margin-left: -50px;
+            margin-top: -100px;
+        }
+        #equipment-website:hover{
+            background-color: white;
+            color: black;
         }
         footer{
             background-color: whitesmoke;
@@ -121,6 +202,130 @@
         <h2 id="scaryvideo">My Scariest Video to Film</h2>
         <iframe id="pennyvideo" width="345" height="222" src="https://www.youtube.com/embed/5mXU93phwuY" title="Turning $0.01 into $1,000 for Ryan Trahan" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
         <p id="details-scary">In this video, I attempted to raise $1,000 at York Beach, with only a penny and my personality. I was able to buy a water bottle for a penny, sell it for $5, then buy post cards that sold for nearly $20. With that, I bought a joke book and sold jokes for donations, then later bought crayons and paper to make a sign that read, "dares for dollars." A group of middle schoolers dared me to beat a stranger in a basketball game for $7. This was by far the most awkward and insecure I felt filming a video. It was inspired by Ryan Trahan, who makes it look so easy. Although I approach a stranger within the first 30 seconds of the video, in reality, it took multiple hours to build the courage. Although for a great cause, it was particularly straining to request money from strangers, while I was previously accustomed to giving money away.</p>
+        <h2 id="colleges-visited">Every College I've Visited</h2>
+        <img id="harvard-image" src="images/harvard.jpg" alt="harvard" title="Harvard University" height="240">
+        <h2 id="college-name">Harvard University</h2>
+        <ul id="college-details">
+            <li>Founded in <span id="date">1636</span></li>
+            <li id="location">Cambridge, Massachusetts</li>
+            <li>Acceptance Rate: <span id="acceptancerate">4</span>%</li>
+            <li>Graduation Rate: <span id="gradrate">98</span>%</li>
+        </ul>
+        <a id="college-website" href="https://harvard.edu" target="_blank">Website</a>
+        <!--I learned how to open link in new tab from W3Schools-->
+        <h2 id="equipment">My Camera</h2>
+        <img id="equipment-image" src="images/zve10.jpg" alt="camera" title="ZV E-10 Camera" height="255">
+        <h2 id="equipment-name">Sony ZV-E10</h2>
+        <ul id="equipment-details">
+            <li>Price: $799</li>
+        </ul>
+        <a id="equipment-website" href="https://www.bestbuy.com/site/sony-alpha-zv-e10-kit-mirrorless-vlog-camera-with-16-50mm-lens-black/6473808.p?skuId=6473808&extStoreId=436&ref=212&loc=1&gclid=Cj0KCQjwgLOiBhC7ARIsAIeetVDwdTcSrzWUOB5gTPUX5fE_AQlnh9XhcHNF233pKJxmg4FYsWDXatkaAisiEALw_wcB&gclsrc=aw.ds" target="_blank">Shop Now</a>
+
+        <script>
+            const imageEl = document.querySelector("#harvard-image"); 
+            const nameEl = document.querySelector("#college-name");
+            const dateEl = document.querySelector("#date");
+            const locationEl = document.querySelector("#location");
+            const acceptanceEl = document.querySelector("#acceptancerate");
+            const gradrateEl = document.querySelector("#gradrate");
+            const websiteEl = document.querySelector("#college-website");
+
+            const images = [
+                "images/harvard.jpg",
+                "images/mit.jpg",
+                "images/stanford.jpg",
+                "images/duke.jpg",
+            ]
+
+            const names = [
+                "Harvard University",
+                "Massachusetts Institute of Technology",
+                "Stanford University",
+                "Duke University",
+            ]
+
+            const dates = [
+                "1636",
+                "1861",
+                "1885",
+                "1838",
+            ]
+
+            const locations = [
+                "Cambridge, MA",
+                "Cambridge, MA",
+                "Stanford, CA",
+                "Durham, NC",
+            ]
+
+            const acceptancerates = [
+                "4",
+                "4",
+                "4",
+                "6",
+            ]
+
+            const gradrates = [
+                "98",
+                "94",
+                "94",
+                "96",
+            ]
+
+            const websites = [
+                "https://harvard.edu",
+                "https://mit.edu",
+                "https://stanford.edu",
+                "https://duke.edu",
+            ]
+
+            
+            let index=0;
+
+            function changeSlide(){
+                if (index === images.length){
+                    index=0
+                }
+                if (index === names.length){
+                    index=0
+                }
+                if (index === dates.length){
+                    index=0
+                }
+                if (index === locations.length){
+                    index=0
+                }
+                if (index === acceptancerates.length){
+                    index=0
+                }
+                if (index === gradrates.length){
+                    index=0
+                }
+                if (index === websites.length){
+                    index=0
+                }
+                const imageSrc = images[index];
+                imageEl.src = imageSrc;
+                const name = names[index];
+                nameEl.textContent = name;
+                const date = dates[index];
+                dateEl.textContent = date;
+                const location = locations[index];
+                locationEl.textContent = location;
+                const acceptancerate = acceptancerates[index];
+                acceptanceEl.textContent = acceptancerate;
+                const gradrate = gradrates[index];
+                gradrateEl.textContent = gradrate;
+                const website = websites[index];
+                websiteEl.href = website;
+                index++;
+            
+            setTimeout(changeSlide, 5000);
+    }
+    document.addEventListener("DOMContentLoaded", function(){
+        changeSlide();
+    });
+        </script>
     </div>
 </body>
 <footer>

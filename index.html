@@ -4,8 +4,61 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Personal Website - First Version</title>
+    <title>Colby Martel</title>
+    <link rel="icon" href="images/favicon.ico">
     <style>
+      /*I watched this YouTube tutorial to help code a CSS animation: https://www.youtube.com/watch?v=f0qX-lkk8Y8 */
+         .container{
+            background-color: white;
+            font-size: 45px;
+            font-weight: 500;
+            font-family: calibri;
+            height: 50px;
+            padding: 10px 10px;
+            margin-top: 10px;
+            border-radius: 8px;
+            display: flex;
+        }
+        .words{
+            overflow: hidden; 
+        }
+        span{
+            display: block;
+            height: 100%;
+            padding-left: 10px;
+            color: blue;
+            animation: spin_words 6s infinite;
+        }
+        @keyframes spin_words{
+            10%{
+                transform: translateY(-112%);
+            }
+            25%{
+                transform: translateY(-100%);
+            }
+            35%{
+                transform: translateY(-212%);
+            }
+            50%{
+                transform: translateY(-200%);
+            }
+            60%{
+                transform: translateY(-312%);
+            }
+            75%{
+                transform: translateY(-300%);
+            }
+            85%{
+                transform: translateY(-412%);
+            }
+            100%{
+                transform: translateY(-400%);
+            }
+        }
+        #heading-animation{
+            margin-top: -4px;
+            margin-left: -5px;
+        }
         header{
             background-color: whitesmoke;
             display: flex;
@@ -85,13 +138,10 @@
             margin-left: 900px;
             text-decoration: underline;
         }
-        #firstvideo{
+        #video-heading{
             margin-left: 20px;
         }
-        #harvardvideo{
-            margin-bottom: 20px;
-        }
-        #blog{
+        #video{
             grid-row-start: 2;
             grid-row-end: 4;
             grid-column-start:1;
@@ -103,16 +153,35 @@
             grid-row-start: 3;
             grid-row-end: 4;
             margin-left: 20px;
+            margin-bottom: 20px;
         }
-        #blog-post{
-            grid-row: 3;
-            margin-top: -250px;
+        #video-description{
+            grid-row: 2;
+            margin-top: 60px;
+            grid-column: 3;
             margin-left: 20px;
+            padding: 10px;
         }
-        #learn-bts{
-            padding: 5px;
-            width: 250px;
+        #subscribe{
+            color: white;
+            background-color: red;
+            padding-left: 20px;
+            padding-right: 20px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            width: 200px;
+            height: 20px;
+            border: 2px solid black;
             border-radius: 10px;
+            text-align: center;
+            font-family: calibri;
+            grid-row: 3;
+            grid-column: 3;
+            margin-left: 30px;
+            margin-top: -80px;
+        }
+        #subscribe:hover {
+            background-color: rgb(230, 98, 98);
         }
     </style>
 </head>
@@ -131,21 +200,28 @@
         </nav>
     </header>
     <div class="grid-container">
-        <div class="image"><img id="image" src="images/ColbyMartelHeadshot.jpg" alt="pfp" title="pfp" height="250">
+        <div class="image"><img id="image" src="images/ColbyMartelHeadshot.jpg" alt="pfp" title="pfp" height="300">
         </div>
         <div id="introduction">
-            <h2>About Me</h2>
-        <p>Hello! My name is Colby Martel. I was born and raised in Nashua, New Hampshire and am now 21 years old. I have two sisters, Mom, Dad, and a 14-year-old dog back home and am currently a junior at Babson College in Wellesley, Massachusetts, studying entrepreneurship and marketing. In high school, I became captain of my cross-country team, was elected as Class President, and discovered my passion for video creation and business, which led me to apply to Babson.</p>
+            <div class="container">
+                <p id="heading-animation">I am </p>
+                <div class="words">
+                    <span>a YouTuber</span>
+                    <span>a student</span>
+                    <span>an artist</span>
+                    <span>a leader</span>
+                    <span>a YouTuber</span>
+                </div>
+            </div>
+        <p>My name is Colby Martel. I was born and raised in Nashua, New Hampshire and am now 21 years old. I have two sisters, Mom, Dad, and a 14-year-old dog back home and am currently a junior at Babson College in Wellesley, Massachusetts, studying entrepreneurship and marketing. In high school, I became captain of my cross-country team, was elected as Class President, and discovered my passion for video creation and business, which led me to apply to Babson.</p>
          <p>My favorite hobby is making YouTube videos. Last semester, I uploaded a new long-form video every Wednesday as well as more than 50 short-form videos, including one every single day in November. This helped me gain more than 100,000 subscribers and 100 million views over that time. My videos primarily involve the exploration of college life through interviews with friends and strangers. My favorite video to make last semester was called, "Asking Harvard Students for a Dorm Tour." I also love to watch YouTube videos. My favorite creators are MrBeast, Ryan Trahan & Kelly Wakasa.
             </p>
         </div>
-        <div id="blog">
-            <h2 id="firstvideo">My First Video</h2>
-            <iframe id="harvardvideo" width="345" height="222" src="https://www.youtube.com/embed/Bt1SIIe8s5I" title="Asking Harvard Students If They Ever Sleep" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>        
-        </div>
-        <div id="blog-post">
-            <p>The latest video published on my channel was filmed on Thursday, October 28th, 2021. The initial filming date was Sunday, October 24th but, after 3 hours on campus at Harvard University, I lacked the confidence to interact with strangers and ask for interviews. I only asked one person, but he was not a student. Rather than feeling discouraged, this failure lit a flame, and I became driven to overcome the insecurity and pursue my dream of being a video creator. So, I asked my friend Kevin to film again with me, and he offered a one hour time slot that Thursday. Once stepping foot on campus, I didn't hesitate to ask for an interview. The first group rejected me, but one minute later, another group accepted, as did the third group. With their responses, I packaged the footage into this six minute video, which now has been viewed nearly 5 million times.</p>
-            <button id="learn-bts" onclick="window.location.href='bts.html';">Learn More: Behind the Scenes</button>
+        <div id="video">
+            <h2 id="video-heading">My Newest Video</h2>
+            <iframe id="dukevideo" width="345" height="222" src="https://www.youtube.com/embed/qejYBHK6duU" title="Asking Duke Students If They Ever Sleep" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>        </div>
+            <p id="video-description"> I visited the Duke University in Durham, North Carolina to ask students about their sleep schedules, study habits, screen time, basketball culture, and more! Comment your thoughts below!! Shoutout to Jun, Albert, Ali, Lucy, Eden, and Akshay!! AND Shaun for filming!!</p>
+            <a id="subscribe" href="https://www.youtube.com/@ColbyMartel" target="_blank">Check Out My Channel!</a>
         </div>
     </div>
 </body>

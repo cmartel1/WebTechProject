@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Videos</title>
+    <link rel="icon" href="images/favicon.ico">
     <style>
         header{
             background-color: whitesmoke;
@@ -51,40 +52,71 @@
             height: 66px;
             border-bottom: solid black 1px;  
         }
-        #stanford{
+        #video1{
             grid-row: 2;
             grid-column: 1;
+            margin-left: 10px;
         }
-        #ava{
+        #video2{
             grid-row: 2;
             grid-column: 2;
         }
-        #call{
+        #video3{
             grid-row: 2;
             grid-column: 3;
         }
         #upcoming{
             grid-row: 3;
             grid-column:1;
+            margin-left: 10px;
         }
         #upcoming-info{
             grid-row: 4;
             grid-column-start: 1;
             grid-column-end: 3;
             margin-top: -20px;
+            margin-left: 10px;
+        }
+        #recent-header{
+            margin-left: 10px;
         }
         form{
-            padding: 10px;
-            width: 75%;
+            grid-row-start: 3;
+            grid-row-end: 5;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            padding: 20px;
+            padding-top: 0px;
+            width: 300px;
+            height: 300px;
             font-family: calibri;
             border: solid 2px grey;
             background-color: whitesmoke;
-            grid-row: 6;
-            margin-bottom: 20px;
+            border-radius: 10px;
+        }
+        input{
+            width: 95%;
+            height: 20px;
+            padding: 5px;
+            margin-bottom: 8px;
+        }
+        button{
+            float: right;
+            padding: 10px;
+            font-family: calibri;
+            border: 2px solid rgb(145, 145, 145);
+            color: grey;
+            margin-top: 12px;
+        }
+        button:hover{
+            background-color:grey;
+            color: white;
         }
         #form-header{
-            grid-row: 5;
-            margin-top: 1px;
+            grid-row: 3;
+            grid-column: 3;
+            border-bottom: 3px solid grey;
+            margin-right: 40px;
         }
         footer{
             background-color: whitesmoke;
@@ -102,6 +134,9 @@
         #email{
             margin-left: 900px;
             text-decoration: underline;
+        }
+        #ncstate{
+            margin-top: 15px;
         }
     </style>
 </head>
@@ -124,34 +159,25 @@
         <h2>My Videos</h2>
     </header>
     <div class="grid-container">
-    <h3>Recent Uploads</h3>
-    <iframe id="stanford" width="345" height="222" src="https://www.youtube.com/embed/r0bGgV2aA2I" title="Asking Stanford Students If They Ever Sleep" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>    
-    <iframe id="ava" width="345" height="222" src="https://www.youtube.com/embed/HPM5Ac5NKRg" title="Surprising Someone I Love" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-    <iframe id="call" width="345" height="222" src="https://www.youtube.com/embed/EH2_i2nzcTI" title="The Most Wholesome Phone Calls of All-Time" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-        <h2 id="upcoming">Upcoming Videos</h2>
-    <div id="upcoming-info"><p>COMING THIS WEDNESDAY: Asking UC Berkeley Students If They Ever Sleep</p>
-    <p>In this video, I visit the University of California Berkeley to ask students about their experiences, application process, sleep and study schedules, procrastination habits, and more.</p></div>
-    <h2 id="form-header">Feedback Form!</h2>
+    <h3 id="recent-header">Recent Uploads</h3>
+    <iframe id="video1" width="345" height="222" src="https://www.youtube.com/embed/qejYBHK6duU" title="Asking Duke Students If They Ever Sleep" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>    
+    <iframe id="video2" width="345" height="222" src="https://www.youtube.com/embed/j99ppp7k7WE" title="I Traveled to Stanford to Surprise My Friend!" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>    
+    <iframe id="video3" width="345" height="222" src="https://www.youtube.com/embed/_to_dPSdlyE" title="Asking Berkeley Students If They Ever Sleep" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    <h2 id="upcoming">NEW THIS WEDNESDAY:</h2>
+    <div id="upcoming-info">
+        <img id="ncstate" src="images/ncstate.jpg" alt="ncstate" title="NC State" height="200">
+        <h3>Surprising My Friend in College After Years Apart</h3>
+        <p>In this video, I visit my friend at North Carolina State University...without him knowing.</p>
+    </div>
     <form action="https://oim-apis.up.railway.app/form2" method="POST">
-        <div>
-            <label for="firstname-input">First Name:</label>
-            <input type="text" placeholder="First name" id="firstname-input" />
-            <div><br>
-            <label for="lastname-input">Last Name:</label>
-            <input type="text" placeholder="Last name" id="lastname-input" />
-            </div><br>
-            <div>
-                <label for="email-input">Email:</label>
-                <input type="email" placeholder="Email address" id="password-input" name="email" />
-            </div><br>
-                <div>
-                    <label for="comments">What do you think of my videos?</label>
-                </div>
-                <div>
-                    <textarea id="comments" name="comments" rows="5" cols="25"
-                        placeholder="Enter your comment here..."></textarea>
-                </div><br>
-                <input type="submit"></div>
+        <h2 id="form-header">Feedback Form!</h2>
+        <input type="text" placeholder="What is your name?" id="name-input" />
+            <input type="email" placeholder="What is your email address?" id="email-input" name="email" />
+            <input id="comments" name="comments" rows="5" cols="25"
+                placeholder="What is your favorite video I've uploaded?"></textarea>
+            <input id="comments" name="comments" rows="5" cols="25"
+                placeholder="Do you have any feedback for my channel?"></textarea>
+            <button>Send Message</button>
             </div>
 </body>
 <footer>
