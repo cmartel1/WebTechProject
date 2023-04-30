@@ -184,9 +184,9 @@
         <h2 id="form-header">Feedback Form!</h2>
         <input type="text" placeholder="What is your name?" id="name-input" />
             <input type="email" placeholder="What is your email address?" id="email-input" name="email" />
-            <input id="comments" name="comments" rows="5" cols="25"
+            <input id="favoriteVideo" rows="5" cols="25"
                 placeholder="What is your favorite video I've uploaded?"></textarea>
-            <input id="comments" name="comments" rows="5" cols="25"
+            <input id="feedback" rows="5" cols="25"
                 placeholder="Do you have any feedback for my channel?"></textarea>
             <button>Send Message</button>
             </div>
@@ -225,6 +225,48 @@
     document.addEventListener("DOMContentLoaded", function(){
     setTimeout(countDown, 1000);
     });
+
+    const form = document.querySelector("form");
+    const nameInput = document.querySelector("#name-input");
+    const emailInput = document.querySelector("#email-input");
+    const favoriteVideoInput = document.querySelector("#favoriteVideo");
+    const feedbackInput = document.querySelector("#feedback");
+
+    function validateForm() {
+
+        //assume valid entry; if there is no value in the box, alert user
+        let isValid = true;
+
+        if(!nameInput.value){
+            isValid = false;
+            alert("Please enter your name.");
+        }
+
+        if(!emailInput.value){
+            isValid = false;
+            alert("Please enter your email address.");
+        }
+
+        if(!favoriteVideoInput.value){
+            isValid = false;
+            alert("Please share your favorite video.");
+        }
+
+        if(!feedbackInput.value){
+            isValid = false;
+            alert("Please share your feedback :)")
+        }
+
+        //after my version of this code did not work, ChatGPT recommended that I include the following lines of code.
+        
+        if(isValid){
+            form.submit();
+        }
+    }
+        form.addEventListener("submit", validateForm);
+        
+        //unfortunately I am still having issues with the validation and submission, but will continue to experiment with it.
+    
     </script>
 </body>
 <footer>
