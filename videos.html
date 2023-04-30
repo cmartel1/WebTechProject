@@ -65,17 +65,12 @@
             grid-row: 2;
             grid-column: 3;
         }
-        #upcoming{
-            grid-row: 3;
-            grid-column:1;
-            margin-left: 10px;
-        }
         #upcoming-info{
-            grid-row: 4;
+            grid-row: 3;
             grid-column-start: 1;
             grid-column-end: 3;
-            margin-top: -20px;
             margin-left: 10px;
+            margin-top: 5px;
         }
         #recent-header{
             margin-left: 10px;
@@ -135,9 +130,27 @@
             margin-left: 900px;
             text-decoration: underline;
         }
-        #ncstate{
-            margin-top: 15px;
-        }
+        #countdown-container{
+            padding: 20px;
+            padding-top: 0px;
+            width: 440px;
+            height: 100px;
+            font-family: calibri;
+            border: solid 2px black;
+            background-color: crimson;
+            color: white;
+            border-radius: 10px;
+            font-size: 20pt;
+            margin-bottom: 120px;
+            margin-top: -250px;
+            margin-left: 5px;
+      }
+      #countdown-heading{
+        color: white;
+        border-bottom: 2px solid black;
+        margin-bottom: 15px;
+        font-size: 16pt;
+      }
     </style>
 </head>
 <body>
@@ -163,10 +176,8 @@
     <iframe id="video1" width="345" height="222" src="https://www.youtube.com/embed/qejYBHK6duU" title="Asking Duke Students If They Ever Sleep" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>    
     <iframe id="video2" width="345" height="222" src="https://www.youtube.com/embed/j99ppp7k7WE" title="I Traveled to Stanford to Surprise My Friend!" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>    
     <iframe id="video3" width="345" height="222" src="https://www.youtube.com/embed/_to_dPSdlyE" title="Asking Berkeley Students If They Ever Sleep" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-    <h2 id="upcoming">NEW THIS WEDNESDAY:</h2>
     <div id="upcoming-info">
-        <img id="ncstate" src="images/ncstate.jpg" alt="ncstate" title="NC State" height="200">
-        <h3>Surprising My Friend in College After Years Apart</h3>
+        <h3>THIS WEDNESDAY: Surprising My Friend in College After Years Apart</h3>
         <p>In this video, I visit my friend at North Carolina State University...without him knowing.</p>
     </div>
     <form action="https://oim-apis.up.railway.app/form2" method="POST">
@@ -179,6 +190,42 @@
                 placeholder="Do you have any feedback for my channel?"></textarea>
             <button>Send Message</button>
             </div>
+    <div id="countdown-container">
+        <h2 id="countdown-heading">Time Until Upload</h2>
+        <div id="countdown"></div>
+    </div>
+
+    <script>
+        //countdown timer for my Wednesday upload
+        const timerEl = document.getElementById("countdown");
+        const wednesday = new Date("May 3, 2023 16:00:00 EST").getTime();
+
+        function countDown() {
+
+        const now = new Date().getTime();
+
+        const timeLeft = wednesday - now;
+
+        const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+ 
+        timerEl.innerHTML = days + " days " + hours + " hours " + minutes + " minutes " + seconds + " seconds";
+
+        if (timeLeft === 0) {
+          const done = document.getElementById("countdown");
+          done.innerHTML = "JUST UPLOADED!";
+        }
+        else{
+            setTimeout(countDown, 1000)
+        }
+    }
+        
+    document.addEventListener("DOMContentLoaded", function(){
+    setTimeout(countDown, 1000);
+    });
+    </script>
 </body>
 <footer>
     <p id="footer">&#169; 2023 Colby Martel | <a href = "sitemap.html">Site Map</a>
